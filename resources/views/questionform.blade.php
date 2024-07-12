@@ -57,6 +57,8 @@
                                     <input type="date" class="form-control" id="question_{{ $question->id }}" name="answers[{{ $question->id }}]" value="{{ old('answers.' . $question->id) }}" required>
                                 @elseif($question->type == 'email')
                                     <input type="email" class="form-control" id="question_{{ $question->id }}" name="answers[{{ $question->id }}]" value="{{ old('answers.' . $question->id) }}" required>
+                                @elseif($question->type == 'number')
+                                    <input type="number" class="form-control" id="question_{{ $question->id }}" name="answers[{{ $question->id }}]" value="{{ old('answers.' . $question->id) }}" required>
                                 @elseif($question->type == 'select-box')
                                     <select class="form-select" id="question_{{ $question->id }}" name="answers[{{ $question->id }}]" required>
                                         <option value="">--Select--</option>
